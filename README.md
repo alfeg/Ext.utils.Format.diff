@@ -8,13 +8,13 @@ Sample usage
 In XTemplates:
   
   ```
-  '<td class="propertyValue">{NewValue:diff(values.OriginalValue, "add")}</td>',
+  '<td class="propertyValue">{OldValue:diff(values.NewValue, "add")}</td>',
   ```
 As columns renderer:
 
   ```
-  dataIndex: 'NewValue',
-  renderer: Ext.util.Format.diffRenderer('OldValue', 'add')
+  dataIndex: 'OldValue',
+  renderer: Ext.util.Format.diffRenderer('NewValue', 'add')
   ```
   
 There is an 'mode' argument. 'add' will highlight only inserted diffs, 'del' - deleted diffs
